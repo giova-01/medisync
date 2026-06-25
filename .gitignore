@@ -1,0 +1,36 @@
+# Este repo solo versiona Backend/ y Frontend/ — todo lo demás queda afuera.
+/Database/
+/docs/
+/Entregable 3 - Correcciones y rubrica/
+/.claude/
+/Tesis.7z
+
+# Ningún archivo Markdown se versiona, salvo el README de la raíz
+# (es el que GitHub muestra como portada del repo). Esto incluye excluir
+# los README.md internos de Backend/ y Frontend/medisync/.
+*.md
+!/README.md
+
+# --- Backend (Python) ---
+# Reglas redundantes con Backend/.gitignore, repetidas acá por si ese
+# archivo no llegara a aplicarse (ej. se borra o se mueve sin querer).
+Backend/.venv/
+Backend/.env
+Backend/**/__pycache__/
+Backend/**/*.pyc
+Backend/.pytest_cache/
+
+# --- Frontend (Flutter/Dart) ---
+# IMPORTANTE: Frontend/medisync/.env NO se ignora — pubspec.yaml lo declara
+# como asset bundleado (flutter_dotenv) y la app no arranca sin él. No
+# contiene secretos, solo la URL del backend (BASE_URL).
+Frontend/medisync/build/
+Frontend/medisync/.dart_tool/
+Frontend/medisync/.flutter-plugins-dependencies
+Frontend/medisync/.pub-cache/
+Frontend/medisync/.pub/
+Frontend/medisync/.idea/
+Frontend/medisync/*.iml
+Frontend/medisync/android/app/debug/
+Frontend/medisync/android/app/profile/
+Frontend/medisync/android/app/release/

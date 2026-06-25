@@ -1,0 +1,48 @@
+name: medisync
+description: "Sistema de Adherencia Terapéutica para Adultos Mayores con Soporte Wearable."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State management
+  provider: ^6.1.2
+
+  # HTTP client
+  dio: ^5.7.0
+
+  # Secure storage for JWT
+  flutter_secure_storage: ^9.2.2
+
+  # Navigation
+  go_router: ^14.3.0
+
+  # Dependency injection
+  get_it: ^8.0.2
+
+  # Environment variables
+  flutter_dotenv: ^5.2.1
+
+  # --- Added in later features ---
+  flutter_blue_plus: ^1.35.3   # device feature (BLE)
+  fl_chart: ^0.69.0            # vital_signs feature (charts)
+  web_socket_channel: ^3.0.1   # vital_signs / alerts live streams
+  # firebase_core: ^3.6.0        # alerts feature (FCM) - needs google-services.json
+  # firebase_messaging: ^15.1.3  # alerts feature (FCM) - needs google-services.json
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
